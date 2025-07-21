@@ -1,6 +1,8 @@
-package modal;
+package model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.Date;
@@ -9,6 +11,7 @@ import java.util.Date;
 public class funcionarios {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String nome_completo;
     private String cpf;
@@ -16,10 +19,41 @@ public class funcionarios {
     private String endereco;
     private String bairro;
     private int cep;
-    private boolean status;
+    private Boolean status;
+    private String password;
+    private String Cargo;
+    private String salario;
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public String getCargo() {
+        return Cargo;
+    }
+
+    public void setCargo(String cargo) {
+        Cargo = cargo;
+    }
+
+    public String getSalario() {
+        return salario;
+    }
+
+    public void setSalario(String salario) {
+        this.salario = salario;
+    }
 
     public String getId() {
         return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setId(String id) {
@@ -74,11 +108,21 @@ public class funcionarios {
         this.cep = cep;
     }
 
-    public boolean isStatus() {
-        return status;
+    public boolean Status() {
+        return Status();
     }
 
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public Boolean getStatus() {
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{id=" + id + ", nome='" + nome_completo + "', cargo='"  + "', salario=" + salario + '}';
+    }
 }
+

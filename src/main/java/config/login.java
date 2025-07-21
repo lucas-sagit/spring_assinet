@@ -14,16 +14,17 @@ import org.springframework.security.web.SecurityFilterChain;
 public class login {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-        httpSecurity
-                .csrf().disable()
-                .authenticationManager(authentication -> authentication
-                .requestMatchers("/login", "/register").permitAll()
-                .anyRequest().authenticated()
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        return http
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/login", "/register").permitAll()
+                        .anyRequest().authenticated()
                 )
-                .formLogin(Customizer.withDefaults());
-        return httpSecurity.build();
+                .formLogin(Customizer.withDefaults()) // Login padrão do Spring
+                .build();
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {

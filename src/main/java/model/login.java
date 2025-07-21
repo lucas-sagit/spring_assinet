@@ -1,10 +1,17 @@
-package modal;
+package model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "login")
 
 public class login {
+
+    @Id
+    @Column(name = "usuario")
 
     private String usuario;
     private String senha;
@@ -25,3 +32,4 @@ public class login {
         this.senha = senha;
     }
 }
+
