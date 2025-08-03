@@ -1,4 +1,4 @@
-package model;
+package com.spring.assinet.demo.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

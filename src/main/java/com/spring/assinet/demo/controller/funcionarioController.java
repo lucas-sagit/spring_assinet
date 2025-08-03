@@ -1,24 +1,20 @@
-package controller;
+package com.spring.assinet.demo.controller;
 
-import model.funcionarios;
-import repository.funcionariosRepository;
+import com.spring.assinet.demo.repository.FuncionariosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/funcionarios")
 class FuncionariosController {
 
     @Autowired
-    private funcionariosRepository funcionariosRepositorysitory;
+    private FuncionariosRepository funcionariosRepositorysitory;
 
     // CREATE
     @PostMapping
     public Funcionario salvar(@RequestBody Funcionario funcionario) {
-        return funcionariosRepository.save(funcionario);
+        return FuncionariosRepository.save(funcionario);
     }
 
     // READ (Todos)

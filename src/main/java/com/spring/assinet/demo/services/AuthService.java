@@ -1,18 +1,16 @@
-package services;
+package com.spring.assinet.demo.services;
 
-import model.funcionarios;
+import com.spring.assinet.demo.model.funcionarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 //import repository.UsuarioRepository; fazendo teste com funcionario
-import repository.funcionariosRepository;
-
-import java.util.Optional;
+import com.spring.assinet.demo.repository.FuncionariosRepository;
 
 @Service
 public class AuthService {
 
     @Autowired
-    private funcionariosRepository funcionariosRepository;
+    private FuncionariosRepository funcionariosRepository;
 
     public funcionarios authenticate(String username, String password) {
         funcionarios funcionario = funcionariosRepository.findByUsername(username);

@@ -1,14 +1,14 @@
-package repository;
+package com.spring.assinet.demo.repository;
 
-import controller.Funcionario;
-import model.funcionarios;
+import com.spring.assinet.demo.controller.Funcionario;
+import com.spring.assinet.demo.model.funcionarios;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface funcionariosRepository extends JpaRepository<funcionarios, String> {
+public interface FuncionariosRepository extends JpaRepository<funcionarios, String> {
     static Funcionario save(Funcionario funcionario) {
         return null;
     }

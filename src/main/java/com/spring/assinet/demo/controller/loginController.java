@@ -1,10 +1,10 @@
-package controller;
+package com.spring.assinet.demo.controller;
 
-import model.funcionarios;
-import model.LoginRequest;
+import com.spring.assinet.demo.model.funcionarios;
+import com.spring.assinet.demo.model.LoginRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.AuthService;
+import com.spring.assinet.demo.services.AuthService;
 
 @RestController
 @RequestMapping("/login")

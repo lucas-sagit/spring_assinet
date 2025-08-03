@@ -1,25 +1,32 @@
-package model;
+package com.spring.assinet.demo.model;
 
-import jakarta.persistence.Id;
-import jakarta.persistence.Entity;
+import com.spring.assinet.demo.servicos.Cliente;
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
 public class pagamentos {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private String id;
     private Number valor;
     private String status;
     private String forma_pagamento;
-    private String pagamento_cliente;
+    private LocalDate data_pagamento;
     private String descricao;
 
-    public String getId() {
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -47,12 +54,12 @@ public class pagamentos {
         this.forma_pagamento = forma_pagamento;
     }
 
-    public String getPagamento_cliente() {
-        return pagamento_cliente;
+    public LocalDate getData_pagamento() {
+        return data_pagamento;
     }
 
-    public void setPagamento_cliente(String pagamento_cliente) {
-        this.pagamento_cliente = pagamento_cliente;
+    public void setData_pagamento(LocalDate data_pagamento) {
+        this.data_pagamento = data_pagamento;
     }
 
     public String getDescricao() {

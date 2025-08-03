@@ -1,4 +1,4 @@
-package model;
+package com.spring.assinet.demo.model;
 
 public class LoginRequest {
     private String username;
