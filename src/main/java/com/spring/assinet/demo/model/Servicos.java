@@ -1,13 +1,14 @@
 package com.spring.assinet.demo.model;
 
-import com.spring.assinet.demo.servicos.Cliente;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 
 @Entity
-public class pagamentos {
-
+public class Servicos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,10 +18,7 @@ public class pagamentos {
     private String forma_pagamento;
     private LocalDate data_pagamento;
     private String descricao;
-
-    @ManyToOne
-    @JoinColumn(name = "cliente_id")
-    private Cliente cliente;
+    private String planos;
 
     public Long getId() {
         return id;
@@ -68,5 +66,13 @@ public class pagamentos {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getPlanos() {
+        return planos;
+    }
+
+    public void setPlanos(String planos) {
+        this.planos = planos;
     }
 }

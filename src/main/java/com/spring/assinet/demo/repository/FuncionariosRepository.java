@@ -8,9 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface FuncionariosRepository extends JpaRepository<Funcionarios, String> {
-   return funcionariosRepository.save(FuncionariosController);
-
+public interface FuncionariosRepository extends JpaRepository<Funcionarios, Long> {
+    Optional<Funcionarios> findByCpf(String cpf);
 
 //    Optional<Funcionarios> findByUsernameAndPassword(String username, String password);
 

@@ -1,5 +1,11 @@
 package com.spring.assinet.demo.repository;
 
+import com.spring.assinet.demo.model.Pagamentos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PagamentosRepository extends JpaRepository<PagamentosRepository, Long> {}
+import java.util.Optional;
+
+public interface PagamentosRepository extends JpaRepository<PagamentosRepository, Long> {
+
+    void deleteById(Long id);
+}

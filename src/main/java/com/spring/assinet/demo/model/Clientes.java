@@ -25,7 +25,7 @@ public class Clientes {
     private List<Pagamentos> pagamentos;
 
     @OneToMany(mappedBy = "cliente")
-    private List<Servico> servicos;
+    private List<Servicos> servicos;
 
     public String getId() {
         return id;

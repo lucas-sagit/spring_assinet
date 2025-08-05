@@ -1,7 +1,6 @@
 package com.spring.assinet.demo.controller;
 
 import com.spring.assinet.demo.model.Usuario;
-import com.spring.assinet.demo.repository.UsuarioRepository;
 import com.spring.assinet.demo.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
