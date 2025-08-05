@@ -1,22 +1,23 @@
 package com.spring.assinet.demo.repository;
 
-import com.spring.assinet.demo.controller.Funcionario;
-import com.spring.assinet.demo.model.funcionarios;
+import com.spring.assinet.demo.controller.FuncionariosController;
+import com.spring.assinet.demo.model.Funcionarios;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface FuncionariosRepository extends JpaRepository<funcionarios, String> {
-    static Funcionario save(Funcionario funcionario) {
-        return null;
-    }
+public interface FuncionariosRepository extends JpaRepository<Funcionarios, String> {
+   return funcionariosRepository.save(FuncionariosController);
 
-    Optional<funcionarios> findByUsernameAndPassword(String username, String password);
 
-    funcionarios findByUsername(String username);
+//    Optional<Funcionarios> findByUsernameAndPassword(String username, String password);
+
+    Funcionarios findByUsername(String username);
 
     void deleteById(Long id);
+
+    Optional<Funcionarios> findById(Long id);
 }
 

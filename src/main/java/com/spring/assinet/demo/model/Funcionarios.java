@@ -8,11 +8,12 @@ import jakarta.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class funcionarios {
+public class Funcionarios {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
+
     private String nome_completo;
     private String cpf;
     private Date data_nascimento;
@@ -44,8 +45,12 @@ public class funcionarios {
         this.salario = salario;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPassword() {
@@ -56,9 +61,6 @@ public class funcionarios {
         this.password = password;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNome_completo() {
         return nome_completo;

@@ -1,6 +1,6 @@
 package com.spring.assinet.demo.controller;
 
-import com.spring.assinet.demo.model.funcionarios;
+import com.spring.assinet.demo.model.Funcionarios;
 import com.spring.assinet.demo.model.LoginRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ class LoginController {
 
     @PostMapping
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-        funcionarios funcionario = authService.authenticate(loginRequest.getUsername(), loginRequest.getPassword());
+        Funcionarios funcionario = authService.authenticate(loginRequest.getUsername(), loginRequest.getPassword());
 
         if (funcionario != null) {
             return ResponseEntity.ok(funcionario);

@@ -1,7 +1,6 @@
 package com.spring.assinet.demo.repository;
 
 import com.spring.assinet.demo.model.Usuario;
-import com.spring.assinet.demo.model.funcionarios;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

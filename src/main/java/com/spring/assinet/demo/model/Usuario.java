@@ -29,5 +29,5 @@ public class Usuario {
     private Role role; // admin, funcionario
 
     @OneToOne(mappedBy = "usuario")
-    private funcionarios funcionarios;
+    private Funcionarios funcionarios;
 }
