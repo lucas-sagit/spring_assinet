@@ -16,7 +16,7 @@ public class FuncionariosService {
     private FuncionariosRepository funcionariosRepository;
 
     public Funcionarios salvar(Funcionarios funcionarios) {
-        return FuncionariosRepository.save(funcionarios);
+        return funcionariosRepository.save(funcionarios);
     }
 
     public List<Funcionarios> listarTodos(){
