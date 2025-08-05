@@ -2,6 +2,7 @@ package com.spring.assinet.demo.services;
 
 import com.spring.assinet.demo.model.Pagamentos;
 import com.spring.assinet.demo.repository.PagamentosRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,10 +11,11 @@ import java.util.Optional;
 @Service
 public class PagamentoService {
 
+    @Autowired
     private PagamentosRepository pagamentosRepository;
 
-    public Pagamentos salvar(Pagamentos pagamentos) {
-        return (Pagamentos) pagamentosRepository.save(pagamentosRepository);
+    public Pagamentos salvar(Pagamentos pagamento) {
+       return pagamentosRepository.save(pagamento);
     }
 
     public List<Pagamentos> listarTodos() {
