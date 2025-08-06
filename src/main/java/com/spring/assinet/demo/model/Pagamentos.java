@@ -14,8 +14,8 @@ public class Pagamentos {
 
     private Number valor;
     private String status;
-    private String forma_pagamento;
-    private LocalDate data_pagamento;
+    private String formaPagamento;
+    private LocalDate dataPagamento;
     private String descricao;
 
     @ManyToOne
@@ -51,19 +51,19 @@ public class Pagamentos {
     }
 
     public String getForma_pagamento() {
-        return forma_pagamento;
+        return formaPagamento;
     }
 
     public void setForma_pagamento(String forma_pagamento) {
-        this.forma_pagamento = forma_pagamento;
+        this.formaPagamento = forma_pagamento;
     }
 
     public LocalDate getData_pagamento() {
-        return data_pagamento;
+        return dataPagamento;
     }
 
     public void setData_pagamento(LocalDate data_pagamento) {
-        this.data_pagamento = data_pagamento;
+        this.dataPagamento = data_pagamento;
     }
 
     public String getDescricao() {

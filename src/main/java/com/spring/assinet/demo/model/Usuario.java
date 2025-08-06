@@ -19,7 +19,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private String nomeCompleto;
     private String email;
     private String password;
 
@@ -38,11 +38,11 @@ public class Usuario {
     }
 
     public String getNome() {
-        return nome;
+        return nomeCompleto;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeCompleto = nome;
     }
 
     public String getEmail() {

@@ -13,23 +13,23 @@ public class Login {
     @Id
     @Column(name = "usuario")
 
-    private String usuario;
-    private String senha;
+    private String nomeCompleto;
+    private String password;
 
     public String getUsuario() {
-        return usuario;
+        return nomeCompleto;
     }
 
     public void setUsuario(String usuario) {
-        this.usuario = usuario;
+        this.nomeCompleto = usuario;
     }
 
     public String getSenha() {
-        return senha;
+        return password;
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.password = senha;
     }
 }
 

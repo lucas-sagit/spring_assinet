@@ -9,11 +9,9 @@ import java.util.Optional;
 
 @Repository
 public interface FuncionariosRepository extends JpaRepository<Funcionarios, Long> {
-    Optional<Funcionarios> findByCpf(String cpf);
+    Optional<Funcionarios> findByUsuario_Email(String Email);
 
-//    Optional<Funcionarios> findByUsernameAndPassword(String username, String password);
-
-    Funcionarios findByUsername(String username);
+    Funcionarios findBynomeCompleto(String nomeCompleto);
 
     void deleteById(Long id);
 

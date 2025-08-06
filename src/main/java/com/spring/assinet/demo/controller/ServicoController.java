@@ -42,7 +42,7 @@ public class ServicoController {
         return servicoService.buscarPorId(id)
                 .map(servicosExistence ->{
                     servicosExistence.setDescricao(servicos.getDescricao());
-                    servicosExistence.setData_pagamento(servicos.getData_pagamento());
+                    servicosExistence.setDataPagamento(servicos.getDataPagamento());
                     servicosExistence.setPlanos(servicos.getPlanos());
                     servicosExistence.setValor(servicos.getValor());
                     Servicos atualizado = servicoService.salvar(servicosExistence);

@@ -1,9 +1,6 @@
 package com.spring.assinet.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -14,9 +11,9 @@ public class Funcionarios {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome_completo;
+    private String nomeCompleto;
     private String cpf;
-    private Date data_nascimento;
+    private Date dataNascimento;
     private String endereco;
     private String bairro;
     private int cep;
@@ -24,6 +21,11 @@ public class Funcionarios {
     private String password;
     private String Cargo;
     private String salario;
+    private String email;
+
+    @OneToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
     public void setStatus(Boolean status) {
         this.status = status;
@@ -63,11 +65,11 @@ public class Funcionarios {
 
 
     public String getNome_completo() {
-        return nome_completo;
+        return nomeCompleto;
     }
 
     public void setNome_completo(String nome_completo) {
-        this.nome_completo = nome_completo;
+        this.nomeCompleto = nome_completo;
     }
 
     public String getCpf() {
@@ -79,11 +81,11 @@ public class Funcionarios {
     }
 
     public Date getData_nascimento() {
-        return data_nascimento;
+        return dataNascimento;
     }
 
     public void setData_nascimento(Date data_nascimento) {
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = data_nascimento;
     }
 
     public String getEndereco() {
@@ -118,13 +120,29 @@ public class Funcionarios {
         this.status = status;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     public Boolean getStatus() {
         return null;
     }
 
     @Override
     public String toString() {
-        return "Funcionario{id=" + id + ", nome='" + nome_completo + "', cargo='"  + "', salario=" + salario + '}';
+        return "Funcionario{id=" + id + ", nome='" + nomeCompleto + "', cargo='"  + "', salario=" + salario + '}';
     }
 }
 

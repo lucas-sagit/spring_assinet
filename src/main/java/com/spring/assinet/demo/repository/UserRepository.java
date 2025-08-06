@@ -1,8 +1,8 @@
 package com.spring.assinet.demo.repository;
 
-import org.apache.catalina.User;
+import com.spring.assinet.demo.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends JpaRepository<Usuario, String> {
 
 }

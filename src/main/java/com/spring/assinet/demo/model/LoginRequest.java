@@ -1,16 +1,16 @@
 package com.spring.assinet.demo.model;
 
 public class LoginRequest {
-    private String username;
+    private String nomeCompleto;
     private String password;
 
     // Getters e Setters
-    public String getUsername() {
-        return username;
+    public String getnomeCompleto() {
+        return nomeCompleto;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setnomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
     public String getPassword() {
