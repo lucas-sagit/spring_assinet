@@ -16,20 +16,20 @@ public class Login {
     private String nomeCompleto;
     private String password;
 
-    public String getUsuario() {
+    public String getnomeCompleto() {
         return nomeCompleto;
     }
 
-    public void setUsuario(String usuario) {
-        this.nomeCompleto = usuario;
+    public void setUsuario(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
-    public String getSenha() {
+    public String getpassword() {
         return password;
     }
 
-    public void setSenha(String senha) {
-        this.password = senha;
+    public void setSenha(String password) {
+        this.password = password;
     }
 }
 
