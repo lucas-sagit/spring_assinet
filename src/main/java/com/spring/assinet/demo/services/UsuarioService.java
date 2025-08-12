@@ -30,7 +30,7 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public Optional<Usuario> BuscarPorEmail(String email){
-        return usuarioRepository.findByEmail(email);
+    public Optional<Usuario> BuscarPornomeCompleto(String nomeCompleto){
+        return usuarioRepository.findBynomeCompleto(nomeCompleto);
     }
 }

@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "login")
 
-public class Login {
+public class LoginRequest {
 
     @Id
     @Column(name = "usuario")
